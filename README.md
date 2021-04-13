@@ -42,7 +42,7 @@ TheMealDB API
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Live Version: [https://admiring-euclid-bee1a5.netlify.app/)
 
 # Authors
 
