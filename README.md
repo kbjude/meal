@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [Live]( https://nifty-borg-733a96.netlify.app) to view it in the browser.
+Open [Live]( https://admiring-euclid-bee1a5.netlify.app/) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
