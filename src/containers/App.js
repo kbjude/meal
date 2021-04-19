@@ -7,6 +7,7 @@ import fetchCategories from '../api/fetchCategories';
 import store from '../reducers/store';
 import { incrementOffset, filterByName } from '../actions/action';
 import Pagination from '../components/Pagination';
+import InputForm from '../components/InputForm';
 
 const SearchBarContainer = styled.div`
 display: flex;
@@ -18,25 +19,6 @@ margin-bottom: 3rem;
 @media screen and (max-width: 800px) {
   flex-direction: column;
   }`;
-
-const SearchBar = styled.input`
-padding: 0.5rem 1rem 0 1rem;
-width: 50%;
-font-family: 'Roboto Condensed', sans-serif;
-font-size: 1.5rem;
-border: none;
-border-bottom: 3px solid black;
-::placeholder,
-::-webkit-input-placeholder {
-  color: lightgray;
-}
-:-ms-input-placeholder {
-   color: lightgray;
-}
-@media screen and (max-width: 800px) {
-  width: 100%;
-  }
-`;
 
 const SearchResults = styled.div`
 display: flex;
@@ -74,9 +56,10 @@ function App() {
   const sortedCharInfo = charInfo.sort((a, b) => a.strCategory.localeCompare(b.strCategory));
   const currentChars = sortedCharInfo.slice(indexOfFirstChar, indexOfLastChar);
 
-  const filterByInput = (e) => {
-    const input = e.target.value;
-    dispatch(filterByName(input, charInfo));
+  const [searchText, setSearchText] = useState('');
+  const updateEntry = (textInput) => {
+    setSearchText(textInput);
+    dispatch(filterByName(searchText, charInfo));
   };
 
   const paginate = (pageNumber) => {
@@ -87,7 +70,7 @@ function App() {
   return (
     <>
       <SearchBarContainer>
-        <SearchBar onChange={(e) => { filterByInput(e); }} type="text" placeholder="SEARCH BY NAME" />
+        <InputForm updateEntry={updateEntry} />
       </SearchBarContainer>
       {
           filteredChars && filteredChars.length > 0 && (
