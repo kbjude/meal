@@ -33,11 +33,11 @@ Your app is ready to be deployed!
 
 
 ### Technologies Used
-React.js
-Redux
-HTML
-CSS
-Create-React-App
+- React.js
+- Redux
+- HTML
+- CSS
+- Create-React-App
 TheMealDB API
 
 ### Deployment
