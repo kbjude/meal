@@ -42,7 +42,7 @@ TheMealDB API
 
 ### Deployment
 
-Live Version: [https://admiring-euclid-bee1a5.netlify.app/)
+[Live Version:](https://admiring-euclid-bee1a5.netlify.app/)
 
 # Authors
 
